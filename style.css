@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+.page {
+  background-color: rgba(234, 231, 225, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 5vw auto;
+}
+
+.gauche {
+  width: 60%;
+}
+
+.droite {
+  width: 40%;
+  padding: 5vw;
+}
+
+#menu {
+  position: fixed;
+  right: 15px;
+  top: 10px;
+  text-decoration: none;
+  color: black
+}
+
+nav {
+  background-color: #333;
+  width: 90vw;
+  margin: 5vw auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -90vw;
+  transform: translateX(100%);
+  transition: right 0.5s ease-in-out;
+
+}
+
+nav a {
+  color: rgb(168, 165, 165);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+nav a:hover {
+  color: #eee;
+}
+
+.menu.active {
+  right: 0;
+
+}
+
+#menu_fermer {
+  position: fixed;
+  right: 15px;
+  top: 10px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .gauche {
+    width: 100%;
+  }
+
+  .droite {
+    width: 100%;
+    padding: 5vw;
+  }
+}
+
+.gauche img {
+  width: 100%;
+  height: auto;
+}
+
+.droite p {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.artiste {
+  font-size: 0.7em;
+  padding-bottom: 4em;
+}
+
+.droite h1 {
+  font-family: 'Lora', serif;
+  font-size: 4em;
+  padding-bottom: 1em;
+  font-style: italic;
+}
